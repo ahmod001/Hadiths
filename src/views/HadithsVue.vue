@@ -5,6 +5,7 @@ import { ref } from 'vue';
 import GoBackBtn from '../components/GoBackBtn.vue';
 import Hadith from '../components/Hadith.vue';
 import HadithPlaceholder from '../components/HadithPlaceholder.vue';
+import Pagination from '../components/Pagination.vue';
 
 const route = useRoute();
 
@@ -18,6 +19,7 @@ const showLoading = ref(false);
         const res = await axios.get(`https://hadithapi.com/public/api/hadiths?apiKey=$2y$10$thUOr5z8D639Br5OinFQuDZOmsQ1svRQIikaRzfq7gH8QwOY4Sa&?chapter=${route.params.chapterId}&?book=${route.params.bookName}`);
 
         hadithList.value = res.data?.hadiths?.data
+
         showLoading.value = !true;
     } catch (error) {
         console.error('Hadith List:', error.response?.data?.message);
@@ -43,4 +45,5 @@ const showLoading = ref(false);
 
         <Hadith v-else v-for="(hadith) in hadithList" :key="hadith.id" :hadith="hadith" />
     </div>
-</template>../components/HadithPlaceholder.vue
+
+</template>
