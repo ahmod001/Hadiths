@@ -28,11 +28,11 @@ const showLoading = ref(false);
 </script>
 
 <template>
-    <header class="flex items-center">
+    <header class="flex items-center pb-10">
         <GoBackBtn />
 
         <!-- Title -->
-        <h3 class="text-2xl text-offgrey-text-color dark:text-dark-text md:text-2xl font-bold  py-10">
+        <h3 class="text-2xl text-offgrey-text-color dark:text-dark-text md:text-2xl font-bold ">
             Chapters
         </h3>
     </header>
