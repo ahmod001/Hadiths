@@ -1,12 +1,12 @@
 <script setup>
 import axios from 'axios';
-import {useRoute} from 'vue-router'
-import { ref} from 'vue';
+import { useRoute } from 'vue-router'
+import { ref } from 'vue';
 import BookPlaceholder from '../components/BookPlaceholder.vue';
 import Chapter from '../components/Chapter.vue';
 import GoBackBtn from '../components/GoBackBtn.vue';
 
-const route = useRoute(); 
+const route = useRoute();
 
 const chapterList = ref([]);
 const showLoading = ref(false);
@@ -28,14 +28,14 @@ const showLoading = ref(false);
 </script>
 
 <template>
-<header class="flex items-center">
-<GoBackBtn/>
+    <header class="flex items-center">
+        <GoBackBtn />
 
-    <!-- Title -->
-    <h3 class="text-2xl text-offgrey-text-color dark:text-dark-text md:text-2xl font-bold  py-10">
-        Chapters
-    </h3>
-</header>
+        <!-- Title -->
+        <h3 class="text-2xl text-offgrey-text-color dark:text-dark-text md:text-2xl font-bold  py-10">
+            Chapters
+        </h3>
+    </header>
 
 
     <div class="grid lg:grid-cols-1 gap-5">

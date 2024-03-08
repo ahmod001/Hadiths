@@ -8,14 +8,14 @@ const { id, chapterNumber, chapterEnglish, chapterArabic, bookSlug } = props.cha
 </script>
 
 <template>
-    <router-link :to="`/${bookSlug}/${id}`">
+    <router-link :to="{ path: `/${bookSlug}/${id}`, query: { c: chapterEnglish } }">
         <div
             class="p-5 sm-max:p-4 flex  group cursor-pointer  false hover:bg-[#ebfcf6] bg-white  hover:dark:bg-darkchapter-list-hover dark:bg-hadith-dark-card justify-between items-center rounded-2xl h-[6.25rem]">
             <div class="flex items-center gap-4">
                 <div class="h-12 w-12 sm-max:w-10 xl:w-10  flex items-center justify-center relative">
                     <h3
                         class="text-gray-400 group-hover:text-white dark:text-hadith-deepoffwhite  false style-Kalpurush absolute md-max:text-base text-xl font-medium  group-hover:opacity-100  xl:text-lg">
-                        {{ Number.parseInt(chapterNumber) + 1 }}
+                        {{ chapterNumber }}
                     </h3><svg class="fill-[#f1f5f4] dark:fill-dark-bg-lite group-hover:fill-green-700 false    "
                         width="56" height="62" viewBox="0 0 56 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
